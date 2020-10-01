@@ -7,6 +7,15 @@ def menu():
     if entrada==1:
         s,c=pr.acesso()
         print(s)
+        pos_menu(c)
+    elif entrada == 2:
+        pr.criar_conta()
+        menu()
+    else:
+        menu()
+
+def pos_menu(c):
+
         if c!=-1:
             entrada1=input("1.Saldo\n2.Saque\n3.Deposito\n4.sair\n")
             entrada1=int(entrada1)
@@ -20,15 +29,11 @@ def menu():
                 return 0
             else:
                 menu()
-            menu()
+            pos_menu(c)
         else:
             menu()
 
-    elif entrada==2:
-        pr.criar_conta()
-        menu()
-    else:
-        menu()
+
 
 def main():
     menu()
