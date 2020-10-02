@@ -24,7 +24,7 @@ def pos_menu(c):
             elif entrada1==2:
                 pr.saque(c)
             elif entrada1==3:
-                pr.ad_dinheiro()
+                pr.ad_dinheiro(c)
             elif entrada1==4:
                 return 0
             else:
