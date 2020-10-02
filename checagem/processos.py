@@ -38,5 +38,8 @@ def ad_dinheiro(cod):
 def saque(cod):
     din=input("Valor: ")
     din=int(din)
-    usuarios[cod].saldo-=din
+    if din>usuarios[cod].saldo:
+        print("saldo insuficiente")
+    else:
+        usuarios[cod].saldo-=din
     print(usuarios[cod].saldo)
